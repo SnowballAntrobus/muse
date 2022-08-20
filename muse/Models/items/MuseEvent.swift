@@ -7,26 +7,45 @@
 
 import Foundation
 
-struct MuseEvent: Codable {
-  var museItem: MuseItem
+class MuseEvent: MuseItem {
   var startTime: Date
   var endTime: Date
+  
+  private enum MuseEventError: Error {
+    case invalidTime
+  }
+  
+  private enum CodingKeys: String, CodingKey {
+    case startTime
+    case endTime
+  }
+  
+  override func encode(to encoder: Encoder) throws {
+    try super.encode(to: encoder)
+    
+    var container = encoder.container(keyedBy: CodingKeys.self)
+    try container.encode(startTime, forKey: .startTime)
+    try container.encode(endTime, forKey: .endTime)
+  }
   
   init(summary: String, starttime: Date, endtime: Date, customStamp: Date? = nil) throws {
     guard starttime < endtime else {
       throw MuseEventError.invalidTime
     }
     
-    self.museItem = MuseItem(summary: summary, customStamp: customStamp)
-    
     self.startTime = starttime
-    
     self.endTime = endtime
+    
+    super.init(summary: summary, customStamp: customStamp)
   }
-}
-
-enum MuseEventError: Error {
-  case invalidTime
+  
+  required init(from decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    startTime = try container.decode(Date.self, forKey: .startTime)
+    endTime = try container.decode(Date.self, forKey: .endTime)
+    
+    try super.init(from: decoder)
+  }
 }
 
 extension MuseEvent {
