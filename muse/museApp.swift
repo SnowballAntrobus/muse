@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct museApp: App {
+  @ObservedObject private var user = User()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          MainView(museEvents: $user.museEvents, museTodos: $user.museTodos, museHabits: $user.museHabits) { user.save() }
+            .onAppear { user.load() }
         }
     }
 }

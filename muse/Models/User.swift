@@ -18,9 +18,11 @@ class User: ObservableObject {
     }
     private static var museEventsURL: URL { return documentsFolder.appendingPathComponent("museEvents.data") }
     private static var museTodosURL: URL { return documentsFolder.appendingPathComponent("museTodos.data") }
+    private static var museHabitsURL: URL { return documentsFolder.appendingPathComponent("museHabits.data")}
     
     @Published var museEvents: [MuseEvent] = []
     @Published var museTodos: [MuseTodo] = []
+    @Published var museHabits: [MuseHabit] = []
     
     func load() {
         DispatchQueue.global(qos: .background).async { [weak self] in
@@ -56,29 +58,57 @@ class User: ObservableObject {
                 self?.museTodos = museTodos
             }
         }
+      
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard let data = try? Data(contentsOf: Self.museHabitsURL) else {
+                #if DEBUG
+                DispatchQueue.main.async {
+                    self?.museHabits = MuseHabit.data
+                }
+                #endif
+                return
+            }
+            guard let museHabits = try? JSONDecoder().decode([MuseHabit].self, from: data) else {
+                fatalError("Can't decode saved muse habit data.")
+            }
+            DispatchQueue.main.async {
+                self?.museHabits = museHabits
+            }
+        }
     }
     
     func save() {
         DispatchQueue.global(qos: .background).async { [weak self] in
             guard let museEvents = self?.museEvents else { fatalError("Self out of scope") }
-            guard let data = try? JSONEncoder().encode(museEvents) else { fatalError("Error encoding data") }
+            guard let data = try? JSONEncoder().encode(museEvents) else { fatalError("Error encoding event data") }
             do {
                 let outfile = Self.museEventsURL
                 try data.write(to: outfile)
             } catch {
-                fatalError("Can't write to file")
+                fatalError("Can't write to museEvents file")
             }
         }
         
         DispatchQueue.global(qos: .background).async { [weak self] in
             guard let museTodos = self?.museTodos else { fatalError("Self out of scope") }
-            guard let data = try? JSONEncoder().encode(museTodos) else { fatalError("Error encoding data") }
+            guard let data = try? JSONEncoder().encode(museTodos) else { fatalError("Error encoding todo data") }
             do {
                 let outfile = Self.museTodosURL
                 try data.write(to: outfile)
             } catch {
-                fatalError("Can't write to file")
+                fatalError("Can't write to museTodos file")
             }
+        }
+      
+        DispatchQueue.global(qos: .background).async { [weak self] in
+          guard let museHabits = self?.museHabits else { fatalError("Self out of scope") }
+          guard let data = try? JSONEncoder().encode(museHabits) else { fatalError("Error encoding habit data") }
+          do {
+              let outfile = Self.museHabitsURL
+              try data.write(to: outfile)
+          } catch {
+              fatalError("Can't write to museHabits file")
+          }
         }
     }
 }

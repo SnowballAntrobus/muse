@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9B1C1E3228B096F1007F0BCD /* MuseHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1C1E3128B096F1007F0BCD /* MuseHabit.swift */; };
 		9B6C2A2728AB8D700082012E /* museApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C2A2628AB8D700082012E /* museApp.swift */; };
-		9B6C2A2928AB8D700082012E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C2A2828AB8D700082012E /* ContentView.swift */; };
 		9B6C2A2B28AB8D720082012E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C2A2A28AB8D720082012E /* Assets.xcassets */; };
 		9B6C2A2E28AB8D720082012E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C2A2D28AB8D720082012E /* Preview Assets.xcassets */; };
 		9B6C2A3828AB93EE0082012E /* MuseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C2A3728AB93EE0082012E /* MuseItem.swift */; };
@@ -17,13 +16,13 @@
 		9B6C2A3D28AB98780082012E /* MuseTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C2A3C28AB98780082012E /* MuseTodo.swift */; };
 		9B6C2A4128AB9CD70082012E /* dateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C2A4028AB9CD70082012E /* dateFormatter.swift */; };
 		9B6C2A4428ABA6F80082012E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C2A4328ABA6F80082012E /* User.swift */; };
+		9BD29C0928B1D4BC006389D2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29C0828B1D4BC006389D2 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9B1C1E3128B096F1007F0BCD /* MuseHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseHabit.swift; sourceTree = "<group>"; };
 		9B6C2A2328AB8D700082012E /* muse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = muse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6C2A2628AB8D700082012E /* museApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = museApp.swift; sourceTree = "<group>"; };
-		9B6C2A2828AB8D700082012E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9B6C2A2A28AB8D720082012E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B6C2A2D28AB8D720082012E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9B6C2A3728AB93EE0082012E /* MuseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseItem.swift; sourceTree = "<group>"; };
@@ -31,6 +30,7 @@
 		9B6C2A3C28AB98780082012E /* MuseTodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseTodo.swift; sourceTree = "<group>"; };
 		9B6C2A4028AB9CD70082012E /* dateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateFormatter.swift; sourceTree = "<group>"; };
 		9B6C2A4328ABA6F80082012E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9BD29C0828B1D4BC006389D2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 		9B6C2A3628AB8EBB0082012E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9B6C2A2828AB8D700082012E /* ContentView.swift */,
+				9BD29C0828B1D4BC006389D2 /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,7 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B6C2A2928AB8D700082012E /* ContentView.swift in Sources */,
+				9BD29C0928B1D4BC006389D2 /* MainView.swift in Sources */,
 				9B6C2A2728AB8D700082012E /* museApp.swift in Sources */,
 				9B6C2A4128AB9CD70082012E /* dateFormatter.swift in Sources */,
 				9B6C2A3D28AB98780082012E /* MuseTodo.swift in Sources */,
