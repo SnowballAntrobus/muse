@@ -17,6 +17,9 @@
 		9B6C2A4128AB9CD70082012E /* dateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C2A4028AB9CD70082012E /* dateFormatter.swift */; };
 		9B6C2A4428ABA6F80082012E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C2A4328ABA6F80082012E /* User.swift */; };
 		9BD29C0928B1D4BC006389D2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29C0828B1D4BC006389D2 /* MainView.swift */; };
+		9BD29C0C28B1DAC5006389D2 /* MuseEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29C0B28B1DAC5006389D2 /* MuseEventsView.swift */; };
+		9BD29C0E28B1DAD1006389D2 /* MuseTodosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29C0D28B1DAD1006389D2 /* MuseTodosView.swift */; };
+		9BD29C1028B1DADF006389D2 /* MuseHabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29C0F28B1DADF006389D2 /* MuseHabitsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		9B6C2A4028AB9CD70082012E /* dateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateFormatter.swift; sourceTree = "<group>"; };
 		9B6C2A4328ABA6F80082012E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9BD29C0828B1D4BC006389D2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		9BD29C0B28B1DAC5006389D2 /* MuseEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseEventsView.swift; sourceTree = "<group>"; };
+		9BD29C0D28B1DAD1006389D2 /* MuseTodosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseTodosView.swift; sourceTree = "<group>"; };
+		9BD29C0F28B1DADF006389D2 /* MuseHabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseHabitsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,7 @@
 		9B6C2A3628AB8EBB0082012E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9BD29C0A28B1D990006389D2 /* items */,
 				9BD29C0828B1D4BC006389D2 /* MainView.swift */,
 			);
 			path = Views;
@@ -115,6 +122,16 @@
 				9B6C2A4028AB9CD70082012E /* dateFormatter.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		9BD29C0A28B1D990006389D2 /* items */ = {
+			isa = PBXGroup;
+			children = (
+				9BD29C0B28B1DAC5006389D2 /* MuseEventsView.swift */,
+				9BD29C0D28B1DAD1006389D2 /* MuseTodosView.swift */,
+				9BD29C0F28B1DADF006389D2 /* MuseHabitsView.swift */,
+			);
+			path = items;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +210,10 @@
 				9B6C2A3D28AB98780082012E /* MuseTodo.swift in Sources */,
 				9B1C1E3228B096F1007F0BCD /* MuseHabit.swift in Sources */,
 				9B6C2A3B28AB96080082012E /* MuseEvent.swift in Sources */,
+				9BD29C0C28B1DAC5006389D2 /* MuseEventsView.swift in Sources */,
+				9BD29C1028B1DADF006389D2 /* MuseHabitsView.swift in Sources */,
 				9B6C2A3828AB93EE0082012E /* MuseItem.swift in Sources */,
+				9BD29C0E28B1DAD1006389D2 /* MuseTodosView.swift in Sources */,
 				9B6C2A4428ABA6F80082012E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
