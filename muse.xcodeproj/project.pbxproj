@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B1C1E3228B096F1007F0BCD /* MuseHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1C1E3128B096F1007F0BCD /* MuseHabit.swift */; };
 		9B6C2A2728AB8D700082012E /* museApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C2A2628AB8D700082012E /* museApp.swift */; };
 		9B6C2A2928AB8D700082012E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C2A2828AB8D700082012E /* ContentView.swift */; };
 		9B6C2A2B28AB8D720082012E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C2A2A28AB8D720082012E /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B1C1E3128B096F1007F0BCD /* MuseHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseHabit.swift; sourceTree = "<group>"; };
 		9B6C2A2328AB8D700082012E /* muse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = muse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6C2A2628AB8D700082012E /* museApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = museApp.swift; sourceTree = "<group>"; };
 		9B6C2A2828AB8D700082012E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				9B6C2A3728AB93EE0082012E /* MuseItem.swift */,
 				9B6C2A3A28AB96080082012E /* MuseEvent.swift */,
 				9B6C2A3C28AB98780082012E /* MuseTodo.swift */,
+				9B1C1E3128B096F1007F0BCD /* MuseHabit.swift */,
 			);
 			path = items;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				9B6C2A2728AB8D700082012E /* museApp.swift in Sources */,
 				9B6C2A4128AB9CD70082012E /* dateFormatter.swift in Sources */,
 				9B6C2A3D28AB98780082012E /* MuseTodo.swift in Sources */,
+				9B1C1E3228B096F1007F0BCD /* MuseHabit.swift in Sources */,
 				9B6C2A3B28AB96080082012E /* MuseEvent.swift in Sources */,
 				9B6C2A3828AB93EE0082012E /* MuseItem.swift in Sources */,
 				9B6C2A4428ABA6F80082012E /* User.swift in Sources */,
