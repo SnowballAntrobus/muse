@@ -20,12 +20,21 @@ struct MuseEventsView: View {
           .padding()
           List(museEvents) { museEvent in
             MuseEventCardView(museEvent: museEvent)
-              .background(NavigationLink("", destination: {}).opacity(0))
+              .background(NavigationLink("", destination: MuseEventDetailView(museEvent: binding(for: museEvent))).opacity(0))
           }
         }
         .navigationBarHidden(true)
       }
     }
+
+  private func binding(for museEvent: MuseEvent) -> Binding<MuseEvent> {
+    guard let museEventIndex = museEvents.firstIndex(where: { $0.id == museEvent.id }) else {
+      fatalError("Can't find museEvent in array")
+    }
+    
+    return $museEvents[museEventIndex]
+  }
+  
 }
 
 struct MuseEventsView_Previews: PreviewProvider {
