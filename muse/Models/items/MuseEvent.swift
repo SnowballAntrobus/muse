@@ -66,3 +66,21 @@ extension MuseEvent {
     ]
   }
 }
+
+extension MuseEvent {
+  struct Datas {
+    var summary: String = ""
+    var startDateTime: Date = Date()
+    var endDateTime: Date = Date()
+  }
+  
+  var data: Datas {
+    return Datas(summary: summary, startDateTime: startDateTime, endDateTime: endDateTime)
+  }
+  
+  func update(from data: Datas) {
+    summary = data.summary
+    startDateTime = data.startDateTime
+    endDateTime = data.endDateTime
+  }
+}

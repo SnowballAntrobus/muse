@@ -10,6 +10,7 @@
 		9B1C1E3228B096F1007F0BCD /* MuseHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1C1E3128B096F1007F0BCD /* MuseHabit.swift */; };
 		9B3CCAC328B4054900FF890B /* MuseEventCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3CCAC228B4054900FF890B /* MuseEventCardView.swift */; };
 		9B3CCAC528B40F5600FF890B /* MuseEventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3CCAC428B40F5600FF890B /* MuseEventDetailView.swift */; };
+		9B68F33928B86EEA00CC25CE /* MuseEventEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B68F33828B86EEA00CC25CE /* MuseEventEditView.swift */; };
 		9B6C2A2728AB8D700082012E /* museApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C2A2628AB8D700082012E /* museApp.swift */; };
 		9B6C2A2B28AB8D720082012E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C2A2A28AB8D720082012E /* Assets.xcassets */; };
 		9B6C2A2E28AB8D720082012E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C2A2D28AB8D720082012E /* Preview Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		9B1C1E3128B096F1007F0BCD /* MuseHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseHabit.swift; sourceTree = "<group>"; };
 		9B3CCAC228B4054900FF890B /* MuseEventCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseEventCardView.swift; sourceTree = "<group>"; };
 		9B3CCAC428B40F5600FF890B /* MuseEventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseEventDetailView.swift; sourceTree = "<group>"; };
+		9B68F33828B86EEA00CC25CE /* MuseEventEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseEventEditView.swift; sourceTree = "<group>"; };
 		9B6C2A2328AB8D700082012E /* muse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = muse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6C2A2628AB8D700082012E /* museApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = museApp.swift; sourceTree = "<group>"; };
 		9B6C2A2A28AB8D720082012E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				9BD29C0B28B1DAC5006389D2 /* MuseEventsView.swift */,
 				9B3CCAC228B4054900FF890B /* MuseEventCardView.swift */,
 				9B3CCAC428B40F5600FF890B /* MuseEventDetailView.swift */,
+				9B68F33828B86EEA00CC25CE /* MuseEventEditView.swift */,
 			);
 			path = events;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				9B6C2A2728AB8D700082012E /* museApp.swift in Sources */,
 				9B6C2A4128AB9CD70082012E /* dateFormatter.swift in Sources */,
 				9B6C2A3D28AB98780082012E /* MuseTodo.swift in Sources */,
+				9B68F33928B86EEA00CC25CE /* MuseEventEditView.swift in Sources */,
 				9B1C1E3228B096F1007F0BCD /* MuseHabit.swift in Sources */,
 				9B6C2A3B28AB96080082012E /* MuseEvent.swift in Sources */,
 				9BD29C0C28B1DAC5006389D2 /* MuseEventsView.swift in Sources */,

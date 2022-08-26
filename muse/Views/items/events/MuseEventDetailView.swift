@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MuseEventDetailView: View {
   @Binding var museEvent: MuseEvent
+  @State private var museEventData: MuseEvent.Datas = MuseEvent.Datas()
+  @State private var isPresented = false
     var body: some View {
       List {
         Text(museEvent.summary)
@@ -28,6 +30,17 @@ struct MuseEventDetailView: View {
           Spacer()
           Text(museEvent.endDateTime.formatted())
         }
+        HStack {
+          Spacer()
+          Button("Edit") {
+            isPresented = true
+            museEventData = museEvent.data
+          }
+          Spacer()
+        }
+      }
+      .fullScreenCover(isPresented: $isPresented) {
+        
       }
     }
 }
