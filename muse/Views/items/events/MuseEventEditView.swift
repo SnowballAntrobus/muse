@@ -16,12 +16,18 @@ struct MuseEventEditView: View {
           TextField("Summary", text: $museEventData.summary)
         }
         HStack {
-          Text("Start:")
-          TextField("Start", text: $museEventData.startDateTime)
+          DatePicker("Start", selection: $museEventData.startDateTime)
         }
         HStack {
-          Text("End:")
-          TextField("End", text: $museEventData.endDateTime)
+          DatePicker("End", selection: $museEventData.endDateTime)
+        }
+        if museEventData.startDateTime < museEventData.endDateTime {
+          HStack {
+            Spacer()
+            Text("Error: start time < end time")
+              .foregroundColor(.red)
+            Spacer()
+          }
         }
       }
     }

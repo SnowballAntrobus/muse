@@ -11,7 +11,7 @@ class MuseEvent: MuseItem {
   var startDateTime: Date
   var endDateTime: Date
   
-  private enum MuseEventError: Error {
+  enum MuseEventError: Error {
     case invalidDateTime
   }
   
@@ -78,7 +78,12 @@ extension MuseEvent {
     return Datas(summary: summary, startDateTime: startDateTime, endDateTime: endDateTime)
   }
   
-  func update(from data: Datas) {
+  func update(from data: Datas) throws {
+    print("cool")
+    guard startDateTime < endDateTime else {
+      throw MuseEventError.invalidDateTime
+    }
+    
     summary = data.summary
     startDateTime = data.startDateTime
     endDateTime = data.endDateTime

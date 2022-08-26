@@ -40,7 +40,25 @@ struct MuseEventDetailView: View {
         }
       }
       .fullScreenCover(isPresented: $isPresented) {
-        
+        NavigationView {
+          MuseEventEditView(museEventData: $museEventData)
+            .navigationTitle("Edit")
+            .toolbar {
+              HStack {
+                Button("Cancel") { isPresented = false }
+                Button("Done") {
+                  print("poop")
+                  do {
+                    try museEvent.update(from: museEventData)
+                  } catch {
+                    print("Invalid Date Time")
+                  }
+                  isPresented = false
+                }
+                .disabled(museEventData.startDateTime > museEventData.endDateTime)
+              }
+            }
+        }
       }
     }
 }
